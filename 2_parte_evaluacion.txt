@@ -1,0 +1,19 @@
+
+--select * from clientes
+
+-- seleccionar todos los regitros donde el nombre empiece con d
+SELECT * FROM clientes WHERE nombre like 'd%'
+
+-- seleccionar todos los registros que tengan el genero masculino y la cantidad sea mayor a 30
+SELECT * from clientes WHERE genero='masculino' AND cantidad_compras>30
+
+-- seleccionar la direccion y el email de los id_clientes que se encuentren entre 25 y 40
+SELECT direccion, email FROM clientes WHERE id_cliente BETWEEN 25 AND 40
+
+-- seleccionar el id_cliente nombre y apellido cuyo correos terminen en .COM
+SELECT id_cliente, nombre, apellido FROM clientes WHERE email like '%.com'
+
+-- actualizar la direccion a humberto 2252 de los clientes cuyo id sea menor a 15
+UPDATE clientes SET direccion = 'humberto 2252' WHERE id_cliente <15
+
+SELECT * FROM clientes
